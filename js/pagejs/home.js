@@ -18,4 +18,11 @@ $(document).ready(function(){
         console.log("next click");
         mainBannerSlider.trigger('next.owl.carousel');
       })
+      
+      //scroll to main content
+      $("#scrollToMainContent").click(function () {
+        $("html, body").animate({
+          scrollTop: $("#mainContent").offset().top
+        }, 0);
+      })
 })
