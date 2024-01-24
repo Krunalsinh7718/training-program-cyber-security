@@ -1,0 +1,187 @@
+body {
+  font-family: $app-font;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $app-text-color;
+  background-color: $app-primary-bg-white;
+}
+a {
+  outline: none;
+  text-decoration: none;
+}
+button {
+  outline: none;
+}
+p {
+  font-size: 14px;
+  line-height: 24px;
+}
+//bootstrap elements
+.btn-primary {
+  color: #fff;
+}
+//app color class
+.app-light-skyblue-bg {
+  background-color: #f2f6f7;
+}
+//app elements
+
+.app-container {
+  max-width: 1920px;
+  padding-inline: toRem(30);
+  margin-inline: auto; 
+  @media(max-width: 767px){
+    padding-inline: toRem(15);
+  }
+  @media(max-width: 575px){
+    padding-inline: toRem(8);
+  }
+}
+.section-pad {
+  padding-block: toRem(60);
+  @media(max-width: 767px){
+    padding-block: toRem(30);
+  }
+}
+
+.with-input-icon{
+  position: relative;
+  .form-control {
+    padding-right: 35px;
+  }
+  .cust-input-icon{
+    pointer-events: none;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 11px;
+    top: 11px;
+    color: rgba(35, 52, 58, 0.612);
+  }
+}
+
+.app-place-item-center{
+  place-items: center;
+}
+
+
+//animations
+.fade-in {
+  animation: fade-in 2000ms ease-in-out;
+}
+
+@include keyframes(DropdownSlideUp) {
+  0% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@include keyframes(bannerImgRightSlide) {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@include keyframes(topSlide) {
+  0% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@include keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//spacing classes
+$spaceamounts: (
+  6,
+  10,
+  15,
+  30,
+  60
+); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .app-m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{toRem($space)} !important;
+    }
+    .app-ne-m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{-toRem($space)} !important;
+    }
+    .app-p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{toRem($space)} !important;
+    }
+  }
+  .app-m-#{$space} {
+    margin: #{toRem($space)} !important;
+  }
+  .app-p-#{$space} {
+    padding: #{toRem($space)} !important;
+  }
+  .app-gap-#{$space} {
+    gap: #{toRem($space)};
+  }
+}
+
+
+//gradients
+.secondary-gradient-bg{
+  background: linear-gradient(99.08deg, #112F4E 0%, #133A62 41.15%, #133A62 100%);
+}
+
+.bootstrap-datetimepicker-widget{
+  font-size: 14px;
+  .prev,.next,.fa-chevron-up,.fa-chevron-down{
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+  .prev{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-left'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  }
+  .next{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  }
+  .fa-chevron-up{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-up'%3E%3Cpolyline points='18 15 12 9 6 15'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  }
+  .fa-chevron-down{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  }
+  table td{
+    height: 34px;
+    line-height: 34px;
+    width: 34px;
+    span{
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+    }
+  }
+  .timepicker-hour, 
+  .timepicker-minute, 
+  .timepicker-second{
+    width: 34px;
+  }
+  
+}

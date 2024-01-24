@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Batch Creation</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- website details for SEO -->
+    <meta name="author" content="DoICT & e-Gov" />
+    <meta name="description" content="Training Program (Cyber Security)" />
+    <meta name="keywords" content="Training Program, Cyber Security" />
+    <meta property="og:title" content="Training Program (Cyber Security)" />
+    <meta
+      property="og:description"
+      content="Training Program (Cyber Security)"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./images/dst_logo.png" />
+    <meta property="og:url" content="https://directorit.gujarat.gov.in/" />
+    <!-- favicon tags -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon-apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/manifest.json" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#pageSecNav" data-bs-offset="80">
+    <div class="main-wrapper">
+      <!-- BEGIN: main header -->
+      <header class="main-header" id="mainHeader">
+        <nav class="bottom-header secondary-gradient-bg">
+          <div class="header-container d-flex flex-wrap">
+            <a
+              class="navbar-brand d-flex align-items-center header-logo-1"
+              href="/"
+            >
+              <div class="logo">
+                <img
+                  src="./images/national-emblem-circle.svg"
+                  alt="Logo national emblem"
+                  width="65"
+                  height="65"
+                  class="me-3"
+                />
+
+                <img
+                  src="./images/dst-logo-short.png"
+                  alt="Department of Science & Technology"
+                />
+              </div>
+            </a>
+            <div class="title-menu-group">
+              <div>
+                <h2 class="text-center project-title">
+                  Training Program (Cyber Security)
+                </h2>
+              </div>
+              <div class="menu-wrapper" id="pageNavLinkMenu">
+                <button class="btn nav-menu-close-btn" id="navMenuCloseBtn">
+                  <i data-feather="x" class="btn-icon"></i>
+                </button>
+                <ul
+                  class="navbar-nav nav flex justify-content-center"
+                  id="pageSecNav"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./register.html">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./batch-creation.html"
+                      >Batch Creation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="menu-toggle-btn-group">
+              <button
+                class="btn btn-outline-primary nav-menu-tog-btn me-2"
+                id="navMenuRevilBtn"
+              >
+                <i data-feather="menu" class="btn-icon"></i>
+              </button>
+              <button class="btn btn-outline-primary" title="Login">
+                <i data-feather="log-in" class="btn-icon"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- END: main header -->
+      <!-- BEGIN: main content -->
+      <div class="main-content" id="pageHome">
+        <div class="form-table-section">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Batch Creation
+              </li>
+            </ol>
+          </nav>
+          <div class="form-table-card">
+            <div class="form-container-1">
+              <h3 class="mb-4">Batch Creation</h3>
+              <form>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchName" class="form-label"
+                        >Batch Name</label
+                      >
+                      <input type="text" class="form-control" id="batchName" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchImpartedBy" class="form-label"
+                        >Imparted By</label
+                      >
+                      <select
+                        id="batchImpartedBy"
+                        class="form-select"
+                        aria-label="Imparted By menu"
+                      >
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchStartDate" class="form-label"
+                        >Start Date</label
+                      >
+                      <div class="with-input-icon">
+                        <input
+                          type="text"
+                          class="form-control custDatePicker"
+                          id="batchStartDate"
+                          placeholder="MM/DD/YYYY"
+                        />
+                        <i data-feather="calendar" class="cust-input-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchEndDate" class="form-label"
+                        >End Date</label
+                      >
+                      <div class="with-input-icon">
+                        <input
+                          type="text"
+                          class="form-control custDatePicker"
+                          id="batchEndDate"
+                          placeholder="MM/DD/YYYY"
+                        />
+                        <i data-feather="calendar" class="cust-input-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchStartTime" class="form-label"
+                        >Start Time</label
+                      >
+                      <div class="with-input-icon">
+                        <input
+                          type="text"
+                          class="form-control custTimePicker"
+                          id="batchStartTime"
+                        />
+                        <i data-feather="clock" class="cust-input-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchEndTime" class="form-label"
+                        >End Time</label
+                      >
+                      <div class="with-input-icon">
+                        <input
+                          type="text"
+                          class="form-control custTimePicker"
+                          id="batchEndTime"
+                        />
+                        <i data-feather="clock" class="cust-input-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="mb-3">
+                      <label for="batchVanueLocation" class="form-label"
+                        >Venue / Location</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control custDate"
+                        id="batchVanueLocation"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="mb-4">
+                      <label for="courceDetails" class="form-label"
+                        >Course Details</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control custDate"
+                        id="courceDetails"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="card mb-4">
+                      <div class="card-header">Coordinator Details</div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="mb-3">
+                              <label for="cordiName" class="form-label"
+                                >Name</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control custDate"
+                                id="cordiName"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="mb-3">
+                              <label for="cordiMobile" class="form-label"
+                                >Mobile</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control custDate"
+                                id="cordiMobile"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="mb-3">
+                              <label for="cordiEmail" class="form-label"
+                                >Email</label
+                              >
+                              <input
+                                type="email"
+                                class="form-control custDate"
+                                id="cordiEmail"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-box pt-2">
+                  <button type="button" class="btn btn-secondary">
+                    Create
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: main content -->
+      <!-- BEGIN: main-footer -->
+      <footer
+        class="main-footer text-cnter bg-secondary text-white text-center py-2"
+      >
+        <span>All right reserved &copy; DIT</span>
+      </footer>
+      <!-- BEGIN: main-footer -->
+    </div>
+    <!-- BEGIN: script import -->
+    <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/feather.min.js"></script>
+    <script type="text/javascript" src="./js/headroom.min.js"></script>
+    <script type="text/javascript" src="./js/jQuery.headroom.js"></script>
+    <script
+      type="text/javascript"
+      src="./js/moment-with-locales.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./js/moment-timezone-with-data-2012-2022.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./js/bootstrapDateTimePicker_4.17.47.js"
+    ></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/tempus-dominus.min.js"></script>
+    <script type="text/javascript" src="./js/pagejs/page-common.js"></script>
+    <!-- END: script import -->
+    <noscript>
+      Hey, you have JavaScript disabled, that's why you can see this message.
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+//app fonts
+$app-font : 'Roboto', sans-serif;
+
+//app colors
+$app-primary : #02BFE7;
+$app-primary-bg-white : #F2F4FF;
+$app-secondary: #06163A;
+$app-white: #FFFFFF;
+$app-gray: #858585;
+$app-light-gray: #F1F5F9;
+$app-text-color: #343434;
+
+
+
+/*bootstrap varible overwrite*/
+//color
+$primary: $app-primary;
+$secondary: $app-secondary;
+
+//button
+$btn-font-size: 14px;
+$btn-padding-y: 7.5px;
+$btn-padding-x: 24px;
