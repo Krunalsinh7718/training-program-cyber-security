@@ -2,9 +2,6 @@
 feather.replace();
 
 $(document).ready(function () {
-    
-
-   
 
     //responsive navmenu revil button
     $(document).on('click', '#navMenuRevilBtn', function () {
@@ -17,11 +14,11 @@ $(document).ready(function () {
     })
 
     //common date picker
-    $('.custDatePicker').datetimepicker({
+    $('.custDatePicker').length > 0 && $('.custDatePicker').datetimepicker({
         format: 'MM/DD/YYYY'
     });
     
-    $('.custTimePicker').datetimepicker({
+    $('.custTimePicker').length > 0 && $('.custTimePicker').datetimepicker({
         format: 'hh:mm A'
     })
 
