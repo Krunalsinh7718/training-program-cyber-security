@@ -32,10 +32,11 @@
       align-items: center;
     }
     .project-title{
-      font-size: toRem(23);
+      font-size: toRem(35);
       color: $app-white;
       margin-bottom: 0px;
       padding-block: 12px;
+      font-weight: 400;
     }
     .navbar-nav {
       flex-direction: row;
@@ -53,7 +54,7 @@
         &:hover,
         &:focus,
         &.active {
-          color: $app-primary;
+          color: $app-white;
         }
         &.active:before {
           opacity: 1;
@@ -362,4 +363,15 @@
   
 }
 /*---------END : main footer---------------*/
+
+/*---------BEGIN : focus area---------------*/
+.section-focus-area{
+  @media(max-width: 991px){
+    .focus-area-title-col{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+/*---------BEGIN : focus area---------------*/
 

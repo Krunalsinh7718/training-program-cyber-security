@@ -5,6 +5,9 @@ body {
   color: $app-text-color;
   background-color: $app-primary-bg-white;
 }
+.banner-font{
+  font-family: $app-font-banner;
+}
 a {
   outline: none;
   text-decoration: none;
@@ -64,6 +67,13 @@ p {
   place-items: center;
 }
 
+.form-section-header{
+  padding-bottom: 8px;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 25px;
+  color: #484848;
+  font-size: 18px;
+}
 
 //animations
 .fade-in {
@@ -150,6 +160,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   background: linear-gradient(99.08deg, #112F4E 0%, #133A62 41.15%, #133A62 100%);
 }
 
+// BEGIN : Date Time picker
 .bootstrap-datetimepicker-widget{
   font-size: 14px;
   .prev,.next,.fa-chevron-up,.fa-chevron-down{
@@ -185,3 +196,4 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   }
   
 }
+// END : Date Time picker

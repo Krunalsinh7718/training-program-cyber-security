@@ -42,13 +42,13 @@
     background-color: #0006;
     padding: 30px 10px;
     border-radius: 10px;
-    -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
   }
   
   .web-main-banner .item .itme-content .item-title{
     font-weight: 700;
-    font-size: 45px;
+    font-size: 75px;
     line-height: 56px;
     text-align: center;
     color: #FFFFFF;
@@ -66,8 +66,8 @@
     }
   }
   .web-main-banner .item .itme-content .item-desc{
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 200;
+    font-size: 40px;
     line-height: 30px;
     text-align: center;
     color: #FFFFFF;

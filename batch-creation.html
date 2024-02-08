@@ -39,9 +39,8 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;200;400;500&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -54,7 +53,7 @@
     <div class="main-wrapper">
       <!-- BEGIN: main header -->
       <header class="main-header" id="mainHeader">
-        <nav class="bottom-header secondary-gradient-bg">
+        <nav class="bottom-header bg-secondary">
           <div class="header-container d-flex flex-wrap">
             <a
               class="navbar-brand d-flex align-items-center header-logo-1"
@@ -77,12 +76,10 @@
             </a>
             <div class="title-menu-group">
               <div>
-                <h2 class="text-center project-title">
-                  Training Program (Cyber Security)
-                </h2>
+                <h2 class="text-center project-title banner-font">GSOC</h2>
               </div>
             </div>
-            
+
             <div class="menu-toggle-btn-group">
               <div class="menu-wrapper" id="pageNavLinkMenu">
                 <button class="btn nav-menu-close-btn" id="navMenuCloseBtn">
@@ -93,19 +90,20 @@
                   id="pageSecNav"
                 >
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="./home.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./register.html">Register</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="./batch-creation.html"
-                      >Batch Creation</a
-                    >
+                    <a class="nav-link active" href="#">Batch Creation</a>
                   </li>
                 </ul>
               </div>
-              <span class="text-white align-self-center me-2 px-2 d-none d-lg-block">|</span>
+              <span
+                class="text-white align-self-center me-2 px-2 d-none d-lg-block"
+                >|</span
+              >
               <button
                 class="btn btn-outline-primary nav-menu-tog-btn me-2"
                 id="navMenuRevilBtn"
@@ -133,24 +131,27 @@
           </nav>
           <div class="form-table-card">
             <div class="form-container-1">
-              <h3 class="mb-4">Batch Creation</h3>
+              <h3 class="mb-4 text-secondary">Batch Creation</h3>
               <form>
-                <div class="row">
+                <h5 class="form-section-header">Training Details</h5>
+                <div class="row mb-4">
                   <div class="col-sm-6">
                     <div class="mb-3">
-                      <label for="batchName" class="form-label"
-                        >Batch Name</label
-                      >
-                      <input type="text" class="form-control" id="batchName" />
+                      <label for="batchDomain" class="form-label">Domain</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="batchDomain"
+                      />
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="mb-3">
-                      <label for="batchImpartedBy" class="form-label"
-                        >Imparted By</label
+                      <label for="batchTraining" class="form-label"
+                        >Training</label
                       >
                       <select
-                        id="batchImpartedBy"
+                        id="batchTraining"
                         class="form-select"
                         aria-label="Imparted By menu"
                       >
@@ -160,131 +161,148 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="mb-3">
-                      <label for="batchStartDate" class="form-label"
-                        >Start Date</label
-                      >
-                      <div class="with-input-icon">
-                        <input
-                          type="text"
-                          class="form-control custDatePicker"
-                          id="batchStartDate"
-                          placeholder="MM/DD/YYYY"
-                        />
-                        <i data-feather="calendar" class="cust-input-icon"></i>
+                </div>
+                <h5 class="form-section-header">Batch Details</h5>
+                <div >
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="mb-3">
+                        <label for="batchselBatch" class="form-label"
+                          >Batch</label
+                        >
+                        <select id="batchselBatch" class="form-select" aria-label="Batch menu">
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="mb-3">
-                      <label for="batchEndDate" class="form-label"
-                        >End Date</label
-                      >
-                      <div class="with-input-icon">
-                        <input
-                          type="text"
-                          class="form-control custDatePicker"
-                          id="batchEndDate"
-                          placeholder="MM/DD/YYYY"
-                        />
-                        <i data-feather="calendar" class="cust-input-icon"></i>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="mb-3">
+                        <label for="batchStDate" class="form-label"
+                          >Start Date</label
+                        >
+                        <div class="with-input-icon">
+                          <input
+                            type="text"
+                            class="form-control custDatePicker"
+                            id="batchStDate"
+                          />
+                          <i data-feather="calendar" class="cust-input-icon"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="mb-3">
-                      <label for="batchStartTime" class="form-label"
-                        >Start Time</label
-                      >
-                      <div class="with-input-icon">
-                        <input
-                          type="text"
-                          class="form-control custTimePicker"
-                          id="batchStartTime"
-                        />
-                        <i data-feather="clock" class="cust-input-icon"></i>
+                    <div class="col-sm-3">
+                      <div class="mb-3">
+                        <label for="batcsTime" class="form-label"
+                          >Start Time</label
+                        >
+                        <div class="with-input-icon">
+                          <input
+                            type="text"
+                            class="form-control custTimePicker"
+                            id="batcsTime"
+                          />
+                          <i data-feather="clock" class="cust-input-icon"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="mb-3">
-                      <label for="batchEndTime" class="form-label"
-                        >End Time</label
-                      >
-                      <div class="with-input-icon">
-                        <input
-                          type="text"
-                          class="form-control custTimePicker"
-                          id="batchEndTime"
-                        />
-                        <i data-feather="clock" class="cust-input-icon"></i>
+                    <div class="col-sm-3">
+                      <div class="mb-3">
+                        <label for="batchEDate" class="form-label"
+                          >End Date</label
+                        >
+                        <div class="with-input-icon">
+                          <input
+                            type="text"
+                            class="form-control custDatePicker"
+                            id="batchEDate"
+                          />
+                          <i data-feather="calendar" class="cust-input-icon"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="mb-3">
-                      <label for="batchVanueLocation" class="form-label"
-                        >Venue / Location</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control custDate"
-                        id="batchVanueLocation"
-                      />
+                    <div class="col-sm-3">
+                      <div class="mb-3">
+                        <label for="batchEndTime" class="form-label"
+                          >End Time</label
+                        >
+                        <div class="with-input-icon">
+                          <input
+                            type="text"
+                            class="form-control custTimePicker"
+                            id="batchEndTime"
+                          />
+                          <i data-feather="clock" class="cust-input-icon"></i>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="mb-4">
-                      <label for="courceDetails" class="form-label"
-                        >Course Details</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control custDate"
-                        id="courceDetails"
-                      />
+                    <div class="col-sm-6">
+                      <div class="mb-3">
+                        <label for="batchVanueLocation" class="form-label"
+                          >Venue / Location</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control custDate"
+                          id="batchVanueLocation"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="card mb-4">
-                      <div class="card-header">Coordinator Details</div>
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="mb-3">
-                              <label for="cordiName" class="form-label"
-                                >Name</label
-                              >
-                              <input
-                                type="text"
-                                class="form-control custDate"
-                                id="cordiName"
-                              />
+                    <div class="col-sm-6">
+                      <div class="mb-4">
+                        <label for="batchTrainingImpBy" class="form-label"
+                          >Training Imparted by</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control custDate"
+                          id="batchTrainingImpBy"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="card mb-4">
+                        <div class="card-header">Coordinator Details</div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="mb-3">
+                                <label for="cordiName" class="form-label"
+                                  >Name</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control custDate"
+                                  id="cordiName"
+                                />
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="mb-3">
-                              <label for="cordiMobile" class="form-label"
-                                >Mobile</label
-                              >
-                              <input
-                                type="text"
-                                class="form-control custDate"
-                                id="cordiMobile"
-                              />
+                            <div class="col-sm-6">
+                              <div class="mb-3">
+                                <label for="cordiMobile" class="form-label"
+                                  >Mobile</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control custDate"
+                                  id="cordiMobile"
+                                />
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="mb-3">
-                              <label for="cordiEmail" class="form-label"
-                                >Email</label
-                              >
-                              <input
-                                type="email"
-                                class="form-control custDate"
-                                id="cordiEmail"
-                              />
+                            <div class="col-sm-6">
+                              <div class="mb-3">
+                                <label for="cordiEmail" class="form-label"
+                                  >Email</label
+                                >
+                                <input
+                                  type="email"
+                                  class="form-control custDate"
+                                  id="cordiEmail"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -292,8 +310,61 @@
                     </div>
                   </div>
                 </div>
+                <h5 class="form-section-header">Personal Details</h5>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchPerName" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="batchPerName">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchPerMob" class="form-label">Mobile</label>
+                      <input type="text" class="form-control" id="batchPerMob">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchPerEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="batchPerEmail">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batcHDD" class="form-label">HDD</label>
+                      <select id="batcHDD" class="form-select" aria-label="Imparted By menu">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchOrg" class="form-label">Org.</label>
+                      <input type="text" class="form-control" id="batchOrg">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batcEmpType" class="form-label">Employment Type</label>
+                      <select id="batcEmpType" class="form-select" aria-label="Employee Type menu">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <label for="batchClass" class="form-label">Class</label>
+                      <input type="text" class="form-control" id="batchClass">
+                    </div>
+                  </div>
+                </div>
                 <div class="btn-box pt-2">
-                  <button type="button" class="btn btn-secondary">
+                  <button type="button" class="btn btn-secondary text-light">
                     Create
                   </button>
                 </div>
