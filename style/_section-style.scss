@@ -375,3 +375,35 @@
 }
 /*---------BEGIN : focus area---------------*/
 
+/*---------BEGIN : focus area---------------*/
+.batch-detail-inline-card{
+  position: relative;
+  .bet-text{
+    color: #ababab;
+  }
+  .batch-detail-name{
+    padding-right: 72px;
+  }
+  .btn-box{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    .btn{
+      border-radius: 15px;
+    }
+  }
+}
+.info-box{
+  .info-box-label{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  .info-box-text{
+    font-size: 14px;
+  }
+}
+/*---------BEGIN : focus area---------------*/
+
+
