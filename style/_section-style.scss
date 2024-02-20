@@ -1,6 +1,5 @@
 .main-content {
-  padding-top: 88px;
-  padding-bottom: 30px;
+  padding-top: 156px;
   min-height: calc(100vh - 35px);
 }
 @media (max-width: 767px) {
@@ -24,19 +23,18 @@
   &.headroom--unpinned {
     margin-top: -88px;
   }
- 
-
   .bottom-header {
-    padding: 13px 0px;
+    padding: 6px 0px;
+    border-bottom:  1px solid darken($app-skyblue, 2%);
     .header-container {
       align-items: center;
     }
     .project-title{
-      font-size: toRem(35);
-      color: $app-white;
+      font-size: toRem(48);
+      color: darken($app-secondary,10%);
       margin-bottom: 0px;
       padding-block: 12px;
-      font-weight: 400;
+      font-weight: 600;
     }
     .navbar-nav {
       flex-direction: row;
@@ -100,10 +98,9 @@
     .nav-menu-tog-btn {
       display: none;
     }
-    .btn {
-      @include cirEle(40px);
-      padding: 5px;
-    }
+    .auth-btn{
+      border-radius: 20px;
+    } 
   } 
   
   .nav-menu-close-btn {
@@ -111,6 +108,28 @@
   }
   .header-logo-2 {
     margin-right: 0px;
+  }
+  .top-header{
+    .top-header-link{
+      font-size: 18px;
+      color: #fff;
+      i,svg{
+        font-size: 18px;
+        height: 18px;
+        width: 18px;
+      }
+      span{
+        font-size: 14px;
+      }
+    }
+  }
+  .bottom-menu{
+    .nav-link{
+      font-weight: 400 !important;
+      &.active{
+        color: $app-primary;
+      }
+    }
   }
 }
 .nav-menu-overflow-hidden,
@@ -170,42 +189,8 @@
       margin-right: auto;
     }
   }
-  .main-header .top-header {
-    .settings-menu {
-      
-      .navbar-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column !important;
-        .nav-item {
-          margin-bottom: 10px;
-          padding-left: 10px !important;
-          padding-right: 10px !important;
-          &:after {
-            display: none;
-          }
-          &:not(.lang-select) {
-            order: 1;
-          }
-          &.lang-select {
-            .nav-link {
-              justify-content: center;
-            }
-          }
-        }
-        .theme-select-action,
-        .fontSize-select-action {
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
-      }
-    }
-    .res-text {
-      display: inline;
-    }
-  }
+ 
   .main-header {
-    .top-header .settings-menu,
     .bottom-header .menu-wrapper {
       position: fixed;
       top: 0;
@@ -240,10 +225,7 @@
     padding: 0 10px;
   }
   .main-header {
-    .top-header {
-      height: 0px;
-      padding: 0px;
-    }
+   
     .bottom-header {
       padding: 5px 0px 5px 0px;
       .navbar-brand {
@@ -364,16 +346,7 @@
 }
 /*---------END : main footer---------------*/
 
-/*---------BEGIN : focus area---------------*/
-.section-focus-area{
-  @media(max-width: 991px){
-    .focus-area-title-col{
-      width: 100%;
-      text-align: center;
-    }
-  }
-}
-/*---------BEGIN : focus area---------------*/
+
 
 /*---------BEGIN : focus area---------------*/
 .batch-detail-inline-card{

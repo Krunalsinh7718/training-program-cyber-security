@@ -1,3 +1,4 @@
+@import "./app-varibles";
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -63,7 +64,7 @@ $colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
 ) !default;
 // scss-docs-end colors-map
 
@@ -317,7 +318,8 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "sky-blue" :  $app-skyblue
 ) !default;
 // scss-docs-end theme-colors-map
 

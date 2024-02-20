@@ -49,8 +49,21 @@
   <body data-bs-spy="scroll" data-bs-target="#pageSecNav" data-bs-offset="80">
     <div class="main-wrapper">
       <!-- BEGIN: main header -->
-      <header class="main-header" id="mainHeader">
-        <nav class="bottom-header bg-secondary">
+      <header class="main-header" id="">
+        <div class="top-header bg-secondary py-2">
+          <div class="header-container d-flex justify-content-end gap-3">
+            <a href="mailto:abc@xyz.com" class="top-header-link">
+              <i data-feather="mail" class="btn-icon me-1"></i>
+              <span>abc@xyz.com</span>
+            </a>
+            <span class="text-light">|</span>
+            <a href="tel:+91 99999 99999" class="me-2 top-header-link">
+              <i data-feather="phone" class="btn-icon me-1"></i>
+              <span>+91 99999 99999</span>
+            </a>
+          </div>
+        </div>
+        <nav class="bottom-header bg-sky-blue">
           <div class="header-container d-flex flex-wrap">
             <a
               class="navbar-brand d-flex align-items-center header-logo-1"
@@ -58,10 +71,10 @@
             >
               <div class="logo">
                 <img
-                  src="./images/national-emblem-circle.svg"
+                  src="./images/logo-national-emblem-black.svg"
                   alt="Logo national emblem"
-                  width="65"
-                  height="65"
+                  width="55"
+                  height="55"
                   class="me-3"
                 />
 
@@ -76,41 +89,26 @@
                 <h2 class="text-center project-title banner-font">GSOC</h2>
               </div>
             </div>
-
             <div class="menu-toggle-btn-group">
-              <div class="menu-wrapper" id="pageNavLinkMenu">
-                <button class="btn nav-menu-close-btn" id="navMenuCloseBtn">
-                  <i data-feather="x" class="btn-icon"></i>
-                </button>
-                <ul class="navbar-nav nav flex justify-content-center">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="register.html">Register</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="batch-creation.html"
-                      >Batch Creation</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <span
-                class="text-white align-self-center me-2 px-2 d-none d-lg-block"
-                >|</span
-              >
-              <button
-                class="btn btn-outline-primary nav-menu-tog-btn me-2"
-                id="navMenuRevilBtn"
-              >
-                <i data-feather="menu" class="btn-icon"></i>
-              </button>
-              <button class="btn btn-outline-primary me-2" title="Login">
-                <i data-feather="log-in" class="btn-icon"></i>
-              </button>
+              <button type="button" class="btn btn-secondary text-light auth-btn">Sign In</button>
             </div>
+           
           </div>
+        </nav>
+        <nav class="bottom-menu bg-white navbar navbar-expand-lg py-1">
+          <ul class="navbar-nav nav  justify-content-center align-items-center w-100 gap-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="batch-creation.html"
+                >Batch Creation</a
+              >
+            </li>
+          </ul>
         </nav>
       </header>
       <!-- END: main header -->
@@ -120,25 +118,36 @@
           <div class="owl-carousel owl-theme" id="mainBannerSlider">
             <div
               class="item"
-              style="background-image: url(./images/banner-1.png)"
             >
-              <div class="itme-content">
-                <h2 class="item-title banner-font">GSOC</h2>
-                <p class="item-desc text-capitalize banner-font">
-                  Gujarat Security Operation Center
-                </p>
+              <div class="d-flex">
+
+                <div class="itme-content">
+                  <h2 class="item-title banner-font">GSOC</h2>
+                  <p class="item-desc text-capitalize banner-font mb-4">
+                    Gujarat Security Operation Center
+                  </p>
+                  <p class="text-light item-desc-text mb-4 text-justify">
+                    Welcome to the Gujarat Security Operations Center (SOC), a leading destination for proactive cybersecurity measures and intelligence in the region. The SOC is dedicated unit under the aegis of Department of Science and Technology to safeguard the digital infrastructure of Government of Gujarat through advanced security measures, vigilant monitoring, and proactive threat detection.
+                  </p>
+                  <p class="text-light item-desc-text text-justify">
+                    Gujarat Security Operations Center (GSOC) is established in May 2022. GSOC is the state nodal agency for responding to computer security incidents for State Critical Information Infrastructure. GSOC has been designated to serve as the state agency to perform the following functions in the area of cyber security :
+                  </p>
+                </div>
+                <div class="itme-content banner-image-wrapper">
+                  <img src="./images/banner-image.png" alt="Cyber Security" class="banner-image"/>
+                </div>
               </div>
             </div>
-            <div
+            <!-- <div
               class="item"
               style="background-image: url(./images/banner-2.jpg)"
             >
               <div class="itme-content">
                 <h2 class="item-title mb-0 banner-font">Cyber Security</h2>
               </div>
-            </div>
-          </div>
-          <button class="main-banner-nav-btn nav-prev">
+            </div>-->
+          </div> 
+          <!-- <button class="main-banner-nav-btn nav-prev">
             <svg
               width="134"
               height="134"
@@ -159,107 +168,69 @@
             >
               <path d="M43 114L90.5 66.5L43 19" stroke="white" />
             </svg>
-          </button>
-          <button class="scroll-to-main-cont" id="scrollToMainContent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="93"
-              viewBox="0 0 34 93"
-              fill="none"
-            >
-              <g id="scrollToMainContent">
-                <g id="Group">
-                  <path
-                    id="mouseOutline"
-                    d="M1.1264 13.5977C1.30898 11.9826 1.73031 10.4097 2.44657 8.90693C3.75269 6.18234 5.76102 4.13187 8.48561 2.78362C10.6625 1.71626 12.9657 1.22471 15.3533 1.07022C15.5078 1.05618 15.6482 1.01404 15.8027 1C16.6875 1 17.5723 1 18.4571 1C19.4963 1.14044 20.5497 1.22471 21.5749 1.42133C24.4118 1.94097 26.9679 3.06451 29.0605 5.07284C31.2795 7.20758 32.5575 9.8479 33.021 12.8815C33.1755 13.8646 33.2316 14.8758 33.2316 15.8729C33.2457 19.1593 33.2457 22.4597 33.2457 30.746  M33.2597 30.9001C33.2597 33.4842 33.2597 36.0543 33.2597 38.6385C33.2597 40.9839 32.8384 43.231 31.8272 45.3516C30.5211 48.0622 28.5408 50.1127 25.8163 51.4328C22.7125 52.9496 19.398 53.3288 15.9853 53.2024C13.4011 53.1041 10.8872 52.6266 8.54178 51.489C5.33968 49.9301 3.17687 47.4442 1.92692 44.1298C1.2528 42.3321 1 40.4502 1 38.5261C1 31.2512 1 23.9762 1 13.7153"
-                    stroke="white"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    id="scrollWheelContainer"
-                    d="M14.0087 14.4172C14.0087 15.5143 13.9891 16.6114 14.0087 17.7292C14.0481 19.6129 15.2866 20.9791 16.9577 20.9998C18.6681 21.0205 19.9656 19.6543 19.9853 17.7292C20.0049 15.5764 20.0049 13.4236 19.9853 11.2708C19.9656 9.38713 18.7074 8.02093 17.0363 8.00023C15.3259 7.97953 14.0481 9.36643 14.0087 11.2708C13.9891 12.3265 14.0087 13.3615 14.0087 14.4172Z"
-                    stroke="white"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    id="scrollWheel"
-                    d="M16.0029 11.9873C16.0029 12.156 15.9964 12.3248 16.0029 12.4968C16.016 12.7866 16.4289 12.9968 16.9859 13C17.556 13.0031 17.9885 12.793 17.9951 12.4968C18.0016 12.1656 18.0016 11.8344 17.9951 11.5032C17.9885 11.2134 17.5691 11.0032 17.0121 11C16.442 10.9969 16.016 11.2102 16.0029 11.5032C15.9964 11.6656 16.0029 11.8248 16.0029 11.9873Z"
-                    fill="#D9D9D9"
-                  />
-                </g>
-                <g id="scrollArrows">
-                  <path
-                    id="Vector_5"
-                    d="M13 79L18 84L23 79"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    id="Vector_6"
-                    d="M13 87L18 92L23 87"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    id="Vector_7"
-                    d="M13 71L18 76L23 71"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    id="Vector_8"
-                    d="M13 63L18 68L23 63"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </g>
-            </svg>
+          </button> -->
+          <button class="scroll-to-main-cont btn btn-outline-primary d-flex align-items-center gap-2" id="scrollToMainContent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none"><path style="fill: currentCOlor" fill-rule="evenodd" d="M4.042 7.5a6.458 6.458 0 0 1 12.916 0v5a6.458 6.458 0 1 1-12.916 0v-5ZM10.5 2.292A5.208 5.208 0 0 0 5.292 7.5v5a5.208 5.208 0 1 0 10.416 0v-5A5.208 5.208 0 0 0 10.5 2.292Zm0 1.25c.345 0 .625.28.625.625v2.5a.625.625 0 0 1-1.25 0v-2.5c0-.345.28-.625.625-.625Z" clip-rule="evenodd"/></svg>
+            <span>Learn More</span>
           </button>
         </section>
-        <section class="section-focus-area bg-white">
-          <div class="d-flex flex-wrap">
-            <div class="p-4 bg-primary pe-5 d-grid align-items-center focus-area-title-col"><span class="h4 mb-0">GSOC Focus Area</span></div>
-            <div class="flex-fill">
-              <div class="row mx-0">
-                <div class="col-sm-4 border-end">
-                  <div class="d-flex flex-column align-items-center py-4 focus-area-content-col">
-                    <h5 class="mb-3 text-center">Cyber Security Awareness</h5>
-                    <img src="./images/security-1.svg" alt="Security Audit" height="80" width="80"/>
-                  </div>
-                </div>
-                <div class="col-sm-4 border-end">
-                  <div class="d-flex flex-column align-items-center py-4">
-                    <h5 class="mb-3 text-center">Prevention of Cyber Attacks</h5>
-                    <img src="./images/security-3.svg" alt="Security Audit" height="80" width="80"/>
-                  </div>
-                </div>
-                <div class="col-sm-4 border-end">
-                  <div class="d-flex flex-column align-items-center py-4">
-                    <h5 class="mb-3 text-center">Security Audit</h5>
-                    <img src="./images/security-2.svg" alt="Security Audit" height="80" width="80"/>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="d-flex flex-column align-items-center py-4 border-end">
-                <h4 class="mb-3">Prevention of Cyber Attacks</h4>
-              </div>
-              <div class="d-flex flex-column align-items-center py-4 border-end">
-                <h4 class="mb-3">Security Audit</h4>
-                <img src="./images/security-2.svg" alt="Security Audit" height="80" width="80"/>
-              </div> -->
+        <section class="section-news-flash bg-sky-blue py-3">
+          <div class="owl-carousel owl-theme" id="news-flash-slider">
+            <div class="item text-center">
+              <span class="news-text">Web applications should be security audited at least once a year</span>
             </div>
-            
+            <div class="item text-center">
+              <span class="news-text">Keep the Windows Operating System updated</span>
+            </div>
+            <div class="item text-center">
+              <span class="news-text">Use Firewall and updated Anti-Malware Software</span>
+            </div>
+            <div class="item text-center">
+              <span class="news-text">Backup your important Data regularly</span>
+            </div>
+            <div class="item text-center">
+              <span class="news-text">Web Applications should be Security Audited at least once a Year</span>
+            </div>
+            <div class="item text-center">
+              <span class="news-text">Establish Cyber Incident Response Team</span>
+            </div>
           </div>
         </section>
-        <section class="policy-cards-main app-sec-common-pad" id="mainContent">
+        <section class="section-focus-area bg-white app-sec-common-pad">
+          <div class="container-fluid px-2 px-lg-5">
+            <div class="d-flex flex-wrap justify-content-center">
+              <h2 class="app-section-title">GSOC Focus Area</h2>
+            </div>
+            <div class="row mx-0">
+              <div class="col-lg-3">
+                <div class="d-flex flex-column align-items-center focus-area-card mb-4">
+                  <h5 class="mb-3 text-center focus-area-title">Identification Critical Information Infrastructure</h5>
+                  <dotlottie-player src="./animation-json/animation-1.json" background="transparent" speed="1" style="width: 100%; max-width: 250px; height: 250px"  direction="1" playMode="normal" loop autoplay></dotlottie-player>
+                 
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="d-flex flex-column align-items-center focus-area-card mb-4">
+                  <h5 class="mb-3 text-center focus-area-title">Issue security guidelines, advisories</h5>
+                  <dotlottie-player src="./animation-json/animation-2.json" background="transparent" speed="1" style="width: 100%; max-width: 250px; height: 250px"  direction="1" playMode="normal" loop autoplay></dotlottie-player>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="d-flex flex-column align-items-center focus-area-card mb-4">
+                  <h5 class="mb-3 text-center focus-area-title">Vulnerability Assessment & Penetration Testing</h5>
+                  <dotlottie-player src="./animation-json/animation-3.json" background="transparent" speed="1" style="width: 100%; max-width: 250px; height: 250px"  direction="1" playMode="normal" loop autoplay></dotlottie-player>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="d-flex flex-column align-items-center focus-area-card mb-4">
+                  <h5 class="mb-3 text-center focus-area-title">Cyber Security Awareness and Capacity Building</h5>
+                  <dotlottie-player src="./animation-json/animation-4.json" background="transparent" speed="1" style="width: 100%; max-width: 250px; height: 250px"  direction="1" playMode="normal" loop autoplay></dotlottie-player>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section class="policy-cards-main app-sec-common-pad" id="mainContent">
           <div class="container-fluid px-2 px-lg-5">
             <div class="d-flex flex-wrap justify-content-center">
               <h2 class="app-section-title">Upcoming Events</h2>
@@ -318,6 +289,33 @@
               </div>
             </div>
           </div>
+        </section> -->
+        <section class="section-announcement app-sec-common-pad">
+          <div class="container-fluid px-2 px-lg-5">
+            <div class="d-flex flex-wrap justify-content-center">
+              <h2 class="app-section-title">Announcements</h2>
+            </div>
+            <div class="d-flex flex-wrap anno-row">
+              <div class="img-wrapper w-50 px-2">
+                <img src="./images/announcement.svg" alt="Announcements" />
+              </div>
+              <div class="announcement-text-container w-50 px-2">
+                <div class="announcement-text-card">
+                  <ul class="list-unstyled announcement-text-list marquee-with-options">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante augue, </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <!-- END: main content -->
@@ -337,7 +335,9 @@
     <script src="./js/jQuery.headroom.js"></script>
     <script src="./js/bootstrap-datepicker.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="./js/pagejs/page-common.js"></script>
+   
     <script src="./js/pagejs/home.js"></script>
     <!-- END: script import -->
     <noscript>
