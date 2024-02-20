@@ -23,7 +23,9 @@ $(document).ready(function () {
     })
 
     //headroom
-    $("#mainHeader").headroom();
+    $("#mainHeader").headroom({
+        offset : 50,
+    });
     
 })
 
