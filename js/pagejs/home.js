@@ -21,7 +21,7 @@ $(document).ready(function(){
       //   mainBannerSlider.trigger('next.owl.carousel');
       // })
       var newsFlashSlider = $('#news-flash-slider').owlCarousel({
-        // loop: true,
+        loop: true,
         nav: false,
         dots: false,
         items: 1,

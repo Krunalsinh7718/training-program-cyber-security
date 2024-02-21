@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     //headroom
     $("#mainHeader").headroom({
-        offset : 50,
+        offset : 80,
     });
     
 })
