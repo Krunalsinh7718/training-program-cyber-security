@@ -50,7 +50,7 @@
     <div class="main-wrapper">
       <!-- BEGIN: main header -->
       <header class="main-header" id="mainHeader">
-        <div class="top-header bg-secondary py-2">
+        <div class="top-header bg-secondary py-2" id="topHeader">
           <div class="header-container d-flex justify-content-end gap-3">
             <a href="mailto:abc@xyz.com" class="top-header-link">
               <i data-feather="mail" class="btn-icon me-1"></i>
@@ -61,7 +61,11 @@
               <i data-feather="phone" class="btn-icon me-1"></i>
               <span>+91 99999 99999</span>
             </a>
+            <button class="btn top-header-toggele-btn" id="helpMenuCloseMenuBtn">
+              <i data-feather="x" class="btn-icon"></i>
+            </button>
           </div>
+         
         </div>
         <nav class="bottom-header bg-sky-blue">
           <div class="header-container d-flex flex-wrap">
@@ -75,12 +79,13 @@
                   alt="Logo national emblem"
                   width="55"
                   height="55"
-                  class="me-3"
+                  class="me-3 first-logo"
                 />
 
                 <img
                   src="./images/dst-logo-short.png"
                   alt="Department of Science & Technology"
+                  class="second-logo"
                 />
               </div>
             </a>
@@ -89,13 +94,25 @@
                 <h2 class="text-center project-title banner-font">GSOC</h2>
               </div>
             </div>
-            <div class="menu-toggle-btn-group">
-              <button type="button" class="btn btn-secondary text-light auth-btn">Sign In</button>
+            <div class="menu-toggle-btn-group d-flex gap-2">
+              <button type="button" class="btn btn-secondary text-light signin-btn">
+                <span>Sign In</span>
+                <i data-feather="log-in" class="mx-auto"></i>
+              </button>
+              <button type="button" class="btn btn-secondary text-light res-btn px-2" id="helpMenuOpenMenuBtn">
+                <i data-feather="help-circle" class="mx-auto"></i>
+              </button>
+              <button type="button" class="btn btn-secondary text-light res-btn px-2" id="pageNavMenuOpenBtn">
+                <i data-feather="menu"  class="mx-auto"></i>
+              </button>
             </div>
            
           </div>
         </nav>
-        <nav class="bottom-menu bg-white navbar navbar-expand-lg py-1">
+        <nav class="bottom-menu bg-white navbar navbar-expand-lg py-1" id="pageNavMenu">
+          <button type="button" class="btn btn-secondary text-light res-btn bottom-menu-close-btn" id="bottomMenuCloseBtn">
+            <i data-feather="x"  class="mx-auto"></i>
+          </button>
           <ul class="navbar-nav nav  justify-content-center align-items-center w-100 gap-3">
             <li class="nav-item">
               <a class="nav-link active" href="#">Home</a>
@@ -119,14 +136,14 @@
               <a class="nav-link" href="#">Contact Us</a>
             </li>
 
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="register.html">Register</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="batch-creation.html"
-                >Batch Creation</a
+                >Register a Training</a
               >
-            </li> -->
+            </li>
           </ul>
         </nav>
       </header>
@@ -138,22 +155,26 @@
             <div
               class="item"
             >
-              <div class="d-flex">
+              <div class="">
 
                 <div class="itme-content">
-                  <h2 class="item-title banner-font">GSOC</h2>
-                  <p class="item-desc text-capitalize banner-font mb-4">
-                    Gujarat Security Operation Center
-                  </p>
-                  <p class="text-light item-desc-text mb-4 text-justify">
-                    Welcome to the Gujarat Security Operations Center (SOC), a leading destination for proactive cybersecurity measures and intelligence in the region. The SOC is dedicated unit under the aegis of Department of Science and Technology to safeguard the digital infrastructure of Government of Gujarat through advanced security measures, vigilant monitoring, and proactive threat detection.
-                  </p>
-                  <p class="text-light item-desc-text text-justify">
-                    Gujarat Security Operations Center (GSOC) is established in May 2022. GSOC is the state nodal agency for responding to computer security incidents for State Critical Information Infrastructure. GSOC has been designated to serve as the state agency to perform the following functions in the area of cyber security :
-                  </p>
-                </div>
-                <div class="itme-content banner-image-wrapper">
-                  <img src="./images/banner-image.png" alt="Cyber Security" class="banner-image"/>
+                  <div class="title-wrapper">
+                    <h2 class="item-title banner-font">GSOC</h2>
+                    <p class="item-desc text-capitalize banner-font mb-4">
+                      Gujarat Security Operation Center
+                    </p>
+                  </div>
+                  <div class="banner-image-wrapper">
+                    <img src="./images/banner-image.png" alt="Cyber Security" class="banner-image"/>
+                  </div>
+                  <div class="description-content">
+                    <p class="text-light item-desc-text mb-4 text-justify">
+                      Welcome to the Gujarat Security Operations Center (SOC), a leading destination for proactive cybersecurity measures and intelligence in the region. The SOC is dedicated unit under the aegis of Department of Science and Technology to safeguard the digital infrastructure of Government of Gujarat through advanced security measures, vigilant monitoring, and proactive threat detection.
+                    </p>
+                    <p class="text-light item-desc-text text-justify">
+                      Gujarat Security Operations Center (GSOC) is established in May 2022. GSOC is the state nodal agency for responding to computer security incidents for State Critical Information Infrastructure. GSOC has been designated to serve as the state agency to perform the following functions in the area of cyber security :
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -193,7 +214,7 @@
             <span>Learn More</span>
           </button>
         </section>
-        <section class="section-news-flash bg-sky-blue py-3">
+        <!-- <section class="section-news-flash bg-sky-blue py-3">
           <div class="owl-carousel owl-theme" id="news-flash-slider">
             <div class="item text-center">
               <span class="news-text">Web applications should be security audited at least once a year</span>
@@ -214,11 +235,11 @@
               <span class="news-text">Establish Cyber Incident Response Team</span>
             </div>
           </div>
-        </section>
-        <section class="section-focus-area bg-white app-sec-common-pad">
+        </section> -->
+        <!-- <section class="section-focus-area bg-white app-sec-common-pad">
           <div class="container-fluid px-2 px-lg-5">
             <div class="d-flex flex-wrap justify-content-center">
-              <h2 class="app-section-title">GSOC Focus Area</h2>
+              <h2 class="app-section-title">GSOC Functions</h2>
             </div>
             <div class="row mx-0">
               <div class="col-lg-3">
@@ -248,7 +269,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- <section class="policy-cards-main app-sec-common-pad" id="mainContent">
           <div class="container-fluid px-2 px-lg-5">
             <div class="d-flex flex-wrap justify-content-center">
@@ -309,7 +330,7 @@
             </div>
           </div>
         </section> -->
-        <section class="section-announcement app-sec-common-pad">
+        <!-- <section class="section-announcement app-sec-common-pad">
           <div class="container-fluid px-2 px-lg-5">
             <div class="d-flex flex-wrap justify-content-center">
               <h2 class="app-section-title">Announcements</h2>
@@ -335,7 +356,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
       <!-- END: main content -->
       <!-- BEGIN: main-footer -->

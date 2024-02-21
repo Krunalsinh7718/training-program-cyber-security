@@ -9,7 +9,7 @@ $(document).ready(function () {
     })
 
     //responsive navmenu close button
-    $(document).on('click', '#navMenuCloseBtn', function () {
+    $(document).on('click', '#navMenuCloseBtn', function() {
         navMenuToggle();
     })
 
@@ -24,8 +24,25 @@ $(document).ready(function () {
 
     //headroom
     $("#mainHeader").headroom({
-        offset : 80,
+        offset : 100,
     });
+
+    //help menu toggle
+    $(document).on('click',"#helpMenuOpenMenuBtn", function() {
+        $("#topHeader").toggleClass("top-header-visible")
+    })
+
+    $(document).on('click',"#helpMenuCloseMenuBtn", function() {
+        $("#topHeader").removeClass("top-header-visible")
+    })
+
+    $(document).on('click', "#pageNavMenuOpenBtn", function(){
+        $("#pageNavMenu").addClass("bottom-menu-visible")
+    })
+
+    $(document).on('click', "#bottomMenuCloseBtn", function(){
+        $("#pageNavMenu").removeClass("bottom-menu-visible")
+    })
     
 })
 

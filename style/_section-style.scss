@@ -2,9 +2,14 @@
   padding-top: 156px;
   min-height: calc(100vh - 35px);
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .main-content {
-    padding-top: 42px;
+    padding-top: 75px;
+  }
+}
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 52px;
   }
 }
 /*---------BEGIN : main header---------------*/
@@ -18,14 +23,15 @@
   left: 0px;
   width: 100%;
   z-index: 2;
-  @extend %common-transition;
+  transition: 300ms;
   box-shadow: -1px 4px 14px 0 rgba(0, 0, 0, 0.22);
   &.headroom--unpinned {
-    margin-top: -112px;
+    top: -113px;
   }
   .bottom-header {
     padding: 6px 0px;
     border-bottom:  1px solid darken($app-skyblue, 2%);
+    height: 75px;
     .header-container {
       align-items: center;
     }
@@ -33,7 +39,6 @@
       font-size: toRem(48);
       color: darken($app-secondary,10%);
       margin-bottom: 0px;
-      padding-block: 12px;
       font-weight: 600;
     }
     .navbar-nav {
@@ -98,8 +103,14 @@
     .nav-menu-tog-btn {
       display: none;
     }
-    .auth-btn{
+    .btn{
       border-radius: 20px;
+      height: 40px;
+      &.signin-btn{
+        i,svg{
+          display: none;
+        }
+      }
     } 
   } 
   
@@ -110,6 +121,7 @@
     margin-right: 0px;
   }
   .top-header{
+    height: 38px;
     .top-header-link{
       font-size: 18px;
       color: #fff;
@@ -122,14 +134,29 @@
         font-size: 14px;
       }
     }
+    .top-header-toggele-btn{
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 6px 13px;
+      border-left: 1px solid #73afd2;
+      border-radius: 0;
+      color: #fff;
+    }
+    
   }
   .bottom-menu{
+    height: 44px;
     .nav-link{
       font-weight: 400 !important;
       &.active{
         color: $app-primary;
       }
     }
+  }
+  .res-btn{
+    display: none;
   }
 }
 .nav-menu-overflow-hidden,
@@ -139,22 +166,100 @@
 .settings-menu{
   @extend %common-transition;
 }
+@media (max-width: 1366px) {
+  .main-header{
+    .bottom-menu{
+      .navbar-nav{
+        gap: 2px !important;
+      }
+      .nav-link{
+        font-size: 14px;
+      }
+    } 
+  } 
+}
 @media (max-width: 1199px) {
   .main-header {
     .bottom-header {
       .navbar-brand {
         .logo {
           margin-right: 15px;
+          .second-logo{
+            height: 45px;
+          }
         }
         span {
           font-size: toRem(12);
         }
       }
-      .navbar-nav .nav-link {
-        font-size: toRem(12);
-        padding: 10px 6px;
+     
+    }
+    .top-header{
+      position: absolute;
+      z-index: 1;
+      max-width: 385px;
+      margin-inline: auto;
+      inset: 0 0 0 0;
+      border-radius: 0 0 10px 10px;
+      translate: 0 -100%;
+      padding-right: 40px;
+      box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.141);
+      transition: 150ms;
+
+      &.top-header-visible{
+        translate: 0 0;
+      }
+      .top-header-toggele-btn{
+        display: block;
+      }
+    } 
+    .res-btn{
+      display: block;
+    }
+    .bottom-menu{
+      position: fixed;
+      right: -100%;
+      top: 0;
+      height: 100vh;
+      width: 280px;
+      box-shadow: 0px -1px 15px 3px rgba(0, 0, 0, 0.188);
+      transition: 150ms;
+      &.bottom-menu-visible{
+        right: 0;
+      }
+      .navbar-nav{
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 15px;
+        display: block;
       }
     }
+    .bottom-menu-close-btn{
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0;
+      height: 35px;
+      width: 35px;
+      border-radius: 0 0 0 11px;
+    }
+    .menu-toggle-btn-group{
+      .btn{
+        width: 40px;
+        padding: 0;
+        &.signin-btn{
+          span{
+            display: none;
+          }
+          i,svg{
+            display: block;
+          }
+        }
+      }
+    } 
   }
   .header-container {
     padding: 0 15px;
@@ -182,11 +287,8 @@
     .menu-toggle-btn-group .nav-menu-tog-btn{
       display: block;
     }
-    .header-logo-1 {
-      margin-right: 30px;
-    }
-    .header-logo-2 {
-      margin-right: auto;
+    .project-title{
+      padding-block: 2px;
     }
   }
  
@@ -228,13 +330,17 @@
    
     .bottom-header {
       padding: 5px 0px 5px 0px;
+      height: auto;
       .navbar-brand {
         .logo {
           margin-right: 9px;
           height: auto;
-          img {
-            width: 26px;
-            height: auto;
+          .first-logo{
+            width: 26px !important;
+            height: auto !important;
+          }
+          .second-logo {
+            height: 30px;
           }
         }
         span {
@@ -252,7 +358,7 @@
         }
       }
       .project-title{
-        font-size: 1rem;
+        font-size: 2rem;
         padding-block: 0px;
       }
     }
@@ -294,16 +400,8 @@
     }
   }
 }
-@media (max-width: 575px) {
 
-  .main-header .bottom-header .project-title{
-    max-width: 120px;
-    font-size: 0.7rem;
-    text-align: left !important;
-    line-height: 16px;
-  }
-}
-@media(min-width: 1025px){
+@media(min-width: 1200px){
   .main-header .title-menu-group{
     position: absolute;
     left: 0;
