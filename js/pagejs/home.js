@@ -32,7 +32,11 @@ $(document).ready(function(){
         // mouseDrag  : false
       });
 
-      
+      //jquery marquee text for notification section
+    $("#marqueeText").marquee({
+      speed: 60,
+      direction: 'up',
+  });
       
     
       //scroll to main content

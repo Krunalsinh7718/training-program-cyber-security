@@ -37,11 +37,13 @@ $(document).ready(function () {
     })
 
     $(document).on('click', "#pageNavMenuOpenBtn", function(){
-        $("#pageNavMenu").addClass("bottom-menu-visible")
+        $("#pageNavMenu").addClass("bottom-menu-visible");
+        $("body").addClass("overflow-hidden");
     })
 
     $(document).on('click', "#bottomMenuCloseBtn", function(){
         $("#pageNavMenu").removeClass("bottom-menu-visible")
+        $("body").removeClass("overflow-hidden");
     })
     
 })
