@@ -252,6 +252,8 @@
       .btn{
         width: 40px;
         padding: 0;
+        display: flex;
+        align-items: center;
         &.signin-btn{
           span{
             display: none;
@@ -494,5 +496,76 @@
   }
 }
 /*---------BEGIN : focus area---------------*/
+/*---------BEGIN : focus area---------------*/
+.section-main-action-cards{
+  background-color: #CFEDFF;
+  
+
+}
+.main-action-card{
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.26);
+  transition: 150ms;
+  &:hover,&:focus{
+    scale: 1.05;
+  }
+  .card-label-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.41);
+    .icon-wrapper{
+      display: grid;
+      place-items: center;
+      height: 65px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    .label-icon{
+      height: 30px;
+      font-size: 30px;
+    }
+    p{
+      font-size: 22px;
+      text-align: center;
+      letter-spacing: 2px;
+      margin-bottom: 0px;
+    }
+  }
+  .rediect-link {
+    display: block;
+    color: #fff;
+    padding: 12px 10px;
+    font-size: 20px;
+    text-align: center;
+    i,svg{
+      transition: 150ms;
+    }
+    &:hover, &:focus{
+      i,svg{
+        translate: 5px 0;
+      }
+    }
+  }
+  @media(max-width: 768px){
+    .card-label-container{
+      .icon-wrapper{
+        height: 55px;
+      }
+      .label-icon{
+        height: 20px;
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+/*---------END : focus area---------------*/
 
 

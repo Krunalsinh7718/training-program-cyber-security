@@ -23,10 +23,43 @@ p {
 .btn-primary {
   color: #fff;
 }
-//app color class
+/*----- app color class ---------*/
+
+//backgrounds
 .app-light-skyblue-bg {
   background-color: #f2f6f7;
 }
+.app-flat-red-bg{
+  background-color: $app-flat-red;
+}
+.app-flat-yellow-bg{
+  background-color: $app-flat-yellow;
+}
+.app-flat-green-bg{
+  background-color: $app-flat-green;
+}
+.app-flat-blue-bg{
+  background-color: $app-flat-blue;
+}
+
+//text color
+.app-light-skyblue-color {
+  color: #f2f6f7;
+}
+.app-flat-red-color{
+  color: $app-flat-red;
+}
+.app-flat-yellow-color{
+  color: $app-flat-yellow;
+}
+.app-flat-green-color{
+  color: $app-flat-green;
+}
+.app-flat-blue-color{
+  color: $app-flat-blue;
+}
+
+
 //app elements
 
 .app-container {
