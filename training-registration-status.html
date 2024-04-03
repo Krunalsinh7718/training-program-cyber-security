@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Training Details</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- website details for SEO -->
+    <meta name="author" content="DoICT & e-Gov" />
+    <meta name="description" content="Training Program (Cyber Security)" />
+    <meta name="keywords" content="Training Program, Cyber Security" />
+    <meta property="og:title" content="Training Program (Cyber Security)" />
+    <meta
+      property="og:description"
+      content="Training Program (Cyber Security)"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./images/dst_logo.png" />
+    <meta property="og:url" content="https://directorit.gujarat.gov.in/" />
+    <!-- favicon tags -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon-apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/manifest.json" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;200;400;500&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#pageSecNav" data-bs-offset="80">
+    <div class="main-wrapper">
+      <!-- BEGIN: main header -->
+      <header class="main-header" id="mainHeader">
+        <div class="top-header bg-secondary py-2" id="topHeader">
+          <div class="header-container d-flex justify-content-end gap-3">
+            <a href="mailto:abc@xyz.com" class="top-header-link">
+              <i data-feather="mail" class="btn-icon me-1"></i>
+              <span>abc@xyz.com</span>
+            </a>
+            <span class="seprator text-light">|</span>
+            <a href="tel:+91 99999 99999" class="me-2 top-header-link">
+              <i data-feather="phone" class="btn-icon me-1"></i>
+              <span>+91 99999 99999</span>
+            </a>
+            <button
+              class="btn top-header-toggele-btn"
+              id="helpMenuCloseMenuBtn"
+            >
+              <i data-feather="x" class="btn-icon"></i>
+            </button>
+          </div>
+        </div>
+        <nav class="bottom-header bg-sky-blue">
+          <div class="header-container d-flex flex-wrap">
+            <a
+              class="navbar-brand d-flex align-items-center header-logo-1"
+              href="/"
+            >
+              <div class="logo">
+                <img
+                  src="./images/logo-national-emblem-black.svg"
+                  alt="Logo national emblem"
+                  width="55"
+                  height="55"
+                  class="me-3 first-logo"
+                />
+
+                <img
+                  src="./images/dst-logo-short.png"
+                  alt="Department of Science & Technology"
+                  class="second-logo"
+                />
+              </div>
+            </a>
+            <div class="title-menu-group">
+              <div>
+                <h2 class="text-center project-title banner-font">GSOC</h2>
+              </div>
+            </div>
+            <div class="menu-toggle-btn-group d-flex gap-2">
+              <a
+                type="button"
+                class="btn btn-secondary text-light signin-btn"
+                href="#"
+              >
+                <span>Sign In</span>
+                <i data-feather="log-in" class="mx-auto"></i>
+              </a>
+              <button
+                type="button"
+                class="btn btn-secondary text-light res-btn px-2"
+                id="helpMenuOpenMenuBtn"
+              >
+                <i data-feather="help-circle" class="mx-auto"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary text-light res-btn px-2"
+                id="pageNavMenuOpenBtn"
+              >
+                <i data-feather="menu" class="mx-auto"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <nav
+          class="bottom-menu bg-white navbar navbar-expand-lg py-1"
+          id="pageNavMenu"
+        >
+          <button
+            type="button"
+            class="btn btn-secondary text-light res-btn bottom-menu-close-btn"
+            id="bottomMenuCloseBtn"
+          >
+            <i data-feather="x" class="mx-auto"></i>
+          </button>
+          <ul
+            class="navbar-nav nav justify-content-center align-items-center w-100 gap-3"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Knowledge Base</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Security Best Practices / Advisory</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Training and Awareness</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="batch-creation.html"
+                >Register a Training</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- END: main header -->
+      <!-- BEGIN: main content -->
+      <div class="main-content mb-4" id="pageHome">
+        <div class="form-table-section mt-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Training Details
+              </li>
+            </ol>
+          </nav>
+          <div class="form-table-card p-0">
+            <h2 class="page-main-title">Check Training Registration Status</h2>
+            <div class="page-main-content">
+              <h3 class="section-title mb-4">Filters</h3>
+              <div class="row mx-0 app-gap-100 cotom-sprator">
+                <form class="col px-0" id="formOne" novalidate="novalidate">
+                  <div class="row">
+                    <div class="mb-4 col-md-6">
+                      <div class="form-group">
+                        <label for="trainingName" class="form-label"
+                          >Training Name
+                          <span class="text-danger">*</span></label
+                        >
+                        <select
+                          id="trainingName"
+                          name="trainingName"
+                          class="form-select select2 select2-hidden-accessible"
+                          autocomplete="off"
+                          data-select2-id="trainingName"
+                          tabindex="-1"
+                          aria-hidden="true"
+                        >
+                          <option value="" data-select2-id="2">
+                            -- Select --
+                          </option>
+                          <option value="OQ==">test</option>
+                          <option value="OA==">sdf</option>
+                          <option value="Nw==">sdf</option>
+                          <option value="Ng==">sdfsd</option>
+                          <option value="NQ==">sdfsdf</option>
+                          <option value="MQ==">Application security</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-4 col-md-6">
+                      <div class="form-group">
+                        <label for="bachId" class="form-label"
+                          >Batch <span class="text-danger">*</span></label
+                        >
+                        <select
+                          id="bachId"
+                          name="bachId"
+                          class="form-select select2 select2-hidden-accessible"
+                          autocomplete="off"
+                          data-select2-id="bachId"
+                          tabindex="-1"
+                          aria-hidden="true"
+                        >
+                          <option value="" data-select2-id="5">
+                            -- Select --
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-4 col-md-6">
+                      <div class="form-group">
+                        <label for="formOneEmail" class="form-label"
+                          >Email Address
+                          <span class="text-danger">*</span></label
+                        >
+                        <input
+                          type="email"
+                          id="formOneEmail"
+                          name="formOneEmail"
+                          class="form-control"
+                          autocomplete="off"
+                          fdprocessedid="homrlt"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4 col-md-6">
+                      <div class="form-group">
+                        <label for="mobileNumber" class="form-label"
+                          >Mobile <span class="text-danger">*</span></label
+                        >
+                        <input
+                          type="text"
+                          id="mobileNumber"
+                          name="mobileNumber"
+                          class="form-control"
+                          onkeypress="return isNumberKey(this, event);"
+                          autocomplete="off"
+                          maxlength="10"
+                          minlength="10"
+                          fdprocessedid="cmmi8"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4 col-md-12 d-flex justify-content-end">
+                      <button
+                        type="submit"
+                        class="btn btn-secondary text-white"
+                        fdprocessedid="k9a1d"
+                      >
+                        Filter
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <form class="col px-0" id="formTwo" novalidate="novalidate">
+                  <div class="row">
+                    <div class="mb-4 col-md-6">
+                      <div class="form-group">
+                        <label for="formTwoEmail" class="form-label"
+                          >Email Address
+                          <span class="text-danger">*</span></label
+                        >
+                        <input
+                          type="email"
+                          id="formTwoEmail"
+                          name="formTwoEmail"
+                          class="form-control"
+                          autocomplete="off"
+                          fdprocessedid="5cxjkb"
+                          aria-invalid="false"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4 col-md-6">
+                      <div class="form-group">
+                        <label for="regNumber" class="form-label"
+                          >Registration Number
+                          <span class="text-danger">*</span></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="regNumber"
+                          name="regNumber"
+                          onkeypress="return isNumberKey(this, event);"
+                          autocomplete="off"
+                          maxlength="12"
+                          minlength="12"
+                          fdprocessedid="fmg5ap"
+                          aria-invalid="false"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4 col-md-12 d-flex justify-content-end">
+                      <button
+                        type="submit"
+                        class="btn btn-secondary text-white"
+                        fdprocessedid="g9kddl"
+                      >
+                        Filter
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <hr class="app-hr-seprator" />
+              <div class="sub-section-header mb-4">
+                <h4 class="section-title mb-0 me-2">Status :</h4>
+                <h4 class="section-title text-success mb-0">
+                  Successfully Registered
+                </h4>
+              </div>
+              <div class="sub-section-header mb-4">
+                <h4 class="section-title mb-0">Personal Information</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Registration Number </strong>
+                    <label class="info-box-text">202404000019</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Name </strong>
+                    <label class="info-box-text">Mehul</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Email </strong>
+                    <label class="info-box-text">m@gujarat.gov.in</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Mobile </strong>
+                    <label class="info-box-text">7984528466</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Office Name </strong>
+                    <label class="info-box-text">16 <br>
+                      Assistant Commissioner Unit-3 - SSPA</label>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Employee Type</strong>
+                    <label class="info-box-text">Government</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Class</strong>
+                    <label class="info-box-text">Class 1</label>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Designation</strong>
+                    <label class="info-box-text">Security Architect</label>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-section-header mb-4">
+                <h4 class="section-title mb-0">Training Details</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Training Name </strong>
+              
+                    <label class="info-box-text">Application security</label>
+                  </div>
+                </div>
+              
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Batch Name </strong>
+                    <label class="info-box-text">First Batch</label>
+                  </div>
+                </div>
+              
+                <div class="col-md-3">
+                  <div class="mb-4 info-box me-5">
+                    <span class="font-weight-bold info-box-label">Duration</span>
+                    <div class="info-box-text d-flex flex-wrap align-items-center">
+                      <span class="me-2 d-flex align-items-center">
+                        <i data-feather="calendar" class="me-1" height="14" width="14"></i>
+                        <span>01/01/2024</span>
+                      </span>
+                      <span class="me-2 bet-text"> To </span>
+                      <span class="d-flex align-items-center">
+                        <i data-feather="calendar" class="me-1" height="14" width="14"></i>
+                        <span>01/01/2024</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Time </strong>
+                    <div class="info-box-text d-flex flex-wrap align-items-center">
+                      <span class="me-2 d-flex align-items-center">
+                        <i data-feather="clock" class="me-1" height="14" width="14"></i>
+                        <span>10:30 AM</span>
+                      </span>
+                      <span class="me-2 bet-text"> To </span>
+                      <span class="d-flex align-items-center">
+                        <i data-feather="clock" class="me-1" height="14" width="14"></i>
+                        <span>11:30 AM</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Coordinator </strong>
+                    <label class="info-box-text">
+                      <address>
+                        Gautam Patel<br />9966332211<br />gautam.patel@gmail.com
+                      </address></label
+                    >
+                  </div>
+                </div>
+              
+                <div class="col-md-3">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Venue </strong>
+                    <label class="info-box-text"
+                      ><a href="https://maps.app.goo.gl/Dwn8SD2SmqWJLugE9" target="_blank">
+                        <i data-feather="map-pin" class="me-1" height="14" width="14"></i>
+                        Adani Institute of Digital Technology Management
+                      </a></label
+                    >
+                  </div>
+                </div>
+              
+                <div class="col-md-6">
+                  <div class="mb-4 info-box">
+                    <strong class="info-box-label">Additional Remarks </strong>
+                    <label class="info-box-text">sfdds</label>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: main content -->
+      <!-- BEGIN: main-footer -->
+      <footer
+        class="main-footer text-cnter bg-secondary text-white text-center py-2"
+      >
+        <span>All right reserved &copy; DIT</span>
+      </footer>
+      <!-- BEGIN: main-footer -->
+    </div>
+    <!-- BEGIN: script import -->
+    <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/feather.min.js"></script>
+    <script type="text/javascript" src="./js/headroom.min.js"></script>
+    <script type="text/javascript" src="./js/jQuery.headroom.js"></script>
+    <script
+      type="text/javascript"
+      src="./js/moment-with-locales.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./js/moment-timezone-with-data-2012-2022.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./js/bootstrapDateTimePicker_4.17.47.js"
+    ></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/tempus-dominus.min.js"></script>
+    <script type="text/javascript" src="./js/pagejs/page-common.js"></script>
+    <!-- END: script import -->
+    <noscript>
+      Hey, you have JavaScript disabled, that's why you can see this message.
+    </noscript>
+  </body>
+</html>

@@ -60,7 +60,7 @@ p {
 }
 
 
-//app elements
+//app elements ------------------------------------------------
 
 .app-container {
   max-width: 1920px;
@@ -108,7 +108,63 @@ p {
   font-size: 18px;
 }
 
-//animations
+.page-main-title{
+  font-size: 24px;
+  color: #2F2F2F;
+  line-height: 32px;
+  padding: 20px;
+  border-bottom: 1px solid $app-border-color;
+}
+.page-main-content{
+  padding: 20px;
+}
+.section-title{
+  font-size: 20px;
+  line-height: 26px;
+}
+.cotom-sprator{
+  position: relative;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    top: 0;
+    border-left: 1px solid $app-border-color;
+  }
+  &:after{
+    content: "OR";
+    height: 33px;
+    background-color: #A6A6A6;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+  }
+}
+.app-hr-seprator{
+  border-color: $app-border-color;
+  margin-block: 40px;
+}
+.sub-section-header{
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  color: #727272;
+  background-color: #EFEFEF;
+  border-radius: 14px;
+  padding: 5px 12px;
+}
+//animations ---------------------------------------------
 .fade-in {
   animation: fade-in 2000ms ease-in-out;
 }
@@ -160,7 +216,8 @@ $spaceamounts: (
   10,
   15,
   30,
-  60
+  60,
+  100
 ); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 

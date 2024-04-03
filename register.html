@@ -58,78 +58,101 @@
     <div class="main-wrapper">
       <!-- BEGIN: main header -->
       <header class="main-header" id="mainHeader">
-        
-        <nav class="bottom-header bg-secondary">
+        <div class="top-header bg-secondary py-2" id="topHeader">
+          <div class="header-container d-flex justify-content-end gap-3">
+            <a href="mailto:abc@xyz.com" class="top-header-link">
+              <i data-feather="mail" class="btn-icon me-1"></i>
+              <span>abc@xyz.com</span>
+            </a>
+            <span class="seprator text-light">|</span>
+            <a href="tel:+91 99999 99999" class="me-2 top-header-link">
+              <i data-feather="phone" class="btn-icon me-1"></i>
+              <span>+91 99999 99999</span>
+            </a>
+            <button class="btn top-header-toggele-btn" id="helpMenuCloseMenuBtn">
+              <i data-feather="x" class="btn-icon"></i>
+            </button>
+          </div>
+         
+        </div>
+        <nav class="bottom-header bg-sky-blue">
           <div class="header-container d-flex flex-wrap">
             <a
               class="navbar-brand d-flex align-items-center header-logo-1"
               href="/"
             >
               <div class="logo">
-               
                 <img
-                  src="./images/national-emblem-circle.svg"
+                  src="./images/logo-national-emblem-black.svg"
                   alt="Logo national emblem"
-                  width="65"
-                  height="65"
-                  class="me-3"
+                  width="55"
+                  height="55"
+                  class="me-3 first-logo"
                 />
 
-                <img src="./images/dst-logo-short.png" alt="Department of Science & Technology" />
+                <img
+                  src="./images/dst-logo-short.png"
+                  alt="Department of Science & Technology"
+                  class="second-logo"
+                />
               </div>
-              
             </a>
             <div class="title-menu-group">
               <div>
                 <h2 class="text-center project-title banner-font">GSOC</h2>
               </div>
-              
             </div>
-            
-            <div class="menu-toggle-btn-group">
-              <div class="menu-wrapper" id="pageNavLinkMenu">
-                <button class="btn nav-menu-close-btn" id="navMenuCloseBtn">
-                  <i data-feather="x" class="btn-icon"></i>
-                </button>
-                <ul class="navbar-nav nav flex justify-content-center" id="pageSecNav">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="./home.html"
-                      >Home</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link active"
-                      href="./register.html"
-                      >Register</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="./batch-creation.html"
-                      >Batch Creation</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <span class="text-white align-self-center me-2 px-2 d-none d-lg-block">|</span>
-              <button
-                class="btn btn-outline-primary nav-menu-tog-btn me-2"
-                id="navMenuRevilBtn"
-              >
-                <i data-feather="menu" class="btn-icon"></i>
+            <div class="menu-toggle-btn-group d-flex gap-2">
+              <a type="button" class="btn btn-secondary text-light signin-btn" href="#">
+                <span>Sign In</span>
+                <i data-feather="log-in" class="mx-auto"></i>
+              </a>
+              <button type="button" class="btn btn-secondary text-light res-btn px-2" id="helpMenuOpenMenuBtn">
+                <i data-feather="help-circle" class="mx-auto"></i>
               </button>
-              <button
-                class="btn btn-outline-primary me-2"
-                title="Login"
-              >
-                <i data-feather="log-in" class="btn-icon"></i>
+              <button type="button" class="btn btn-secondary text-light res-btn px-2" id="pageNavMenuOpenBtn">
+                <i data-feather="menu"  class="mx-auto"></i>
               </button>
             </div>
+           
           </div>
+        </nav>
+        <nav class="bottom-menu bg-white navbar navbar-expand-lg py-1" id="pageNavMenu">
+          <button type="button" class="btn btn-secondary text-light res-btn bottom-menu-close-btn" id="bottomMenuCloseBtn">
+            <i data-feather="x"  class="mx-auto"></i>
+          </button>
+          <ul class="navbar-nav nav  justify-content-center align-items-center w-100 gap-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Knowledge Base</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Security Best Practices / Advisory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Training and Awareness</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="batch-creation.html"
+                >Register a Training</a
+              >
+            </li>
+          </ul>
         </nav>
       </header>
       <!-- END: main header -->
