@@ -111,9 +111,9 @@ p {
 .page-main-title{
   font-size: 24px;
   color: #2F2F2F;
-  line-height: 32px;
+  line-height: 27px;
   padding: 20px;
-  border-bottom: 1px solid $app-border-color;
+  border-bottom:1px solid $app-border-color;
 }
 .page-main-content{
   padding: 20px;
@@ -124,31 +124,51 @@ p {
 }
 .cotom-sprator{
   position: relative;
-  &:before{
-    content: "";
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 1px;
-    left: 50%;
-    top: 0;
-    border-left: 1px solid $app-border-color;
+  .col:first-child{
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      right: -50px;
+      top: 0;
+      background-color: $app-border-color;
+    }
+    &:after{
+      content: "OR";
+      height: 33px;
+      background-color: #A6A6A6;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      position: absolute;
+      right: -83px;
+      top: 50%;
+      translate: -50% -50%;
+      border-radius: 50%;
+    }
   }
-  &:after{
-    content: "OR";
-    height: 33px;
-    background-color: #A6A6A6;
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
+  @media (max-width: 1199px){
+    flex-direction: column;
+    gap: 3.25rem !important;
+    .col:first-child{
+      &:before{
+        height: 1px;
+        width: 100%;
+        top: 100%;
+        right: 0px;
+      }
+      &:after{
+        left: 50%;
+      top: auto;
+      }
+      
+    }
   }
 }
 .app-hr-seprator{
@@ -164,6 +184,73 @@ p {
   border-radius: 14px;
   padding: 5px 12px;
 }
+/* -----BEGIN : app multiple select----------- */
+.form-select.app-multiselect + .select2.select2-container {
+  width: 100% !important;
+  .select2-selection__rendered {
+    display: block;
+    line-height: 39px;
+  }
+  .select2-search__field {
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+  }
+  .select2-selection__choice {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .select2-selection--single {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    height: 40px;
+    border-radius: var(--bs-border-radius);
+  }
+  .select2-selection--single
+  .select2-selection__arrow {
+    top: 5px;
+  }
+  .select2-selection--multiple {
+    height: auto;
+    border-radius: 9px;
+  }
+  .select2-selection__rendered {
+    line-height: 39px;
+    font-size: 12px;
+  }
+  &.select2-container--open .select2-selection--single,
+  &.select2-container--focus .select2-selection--single {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #eec280;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(220,132,0,.25);
+  }
+  &.select2-container--open .select2-selection--multiple {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #eec280;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(220,132,0,.25);
+  }
+}
+
+
+
+.app-form-input.app-multiselect.app-multiselect-multiple
+  + .select2.select2-container
+  .select2-selection__rendered {
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.app-form-input.app-multiselect
+  + .select2.select2-container
+.app-form-input.app-multiselect
+  + .select2.select2-container
+  .select2-selection--multiple
+  .select2-selection__arrow {
+  top: 5px;
+}
+/* -----END : app multiple select----------- */
 //animations ---------------------------------------------
 .fade-in {
   animation: fade-in 2000ms ease-in-out;
