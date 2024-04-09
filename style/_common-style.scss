@@ -250,6 +250,9 @@ p {
   .select2-selection__arrow {
   top: 5px;
 }
+.multiselect-popup-dropdown{
+  z-index: 1099;
+}
 /* -----END : app multiple select----------- */
 //animations ---------------------------------------------
 .fade-in {
