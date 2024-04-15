@@ -575,6 +575,7 @@
   z-index: 1;
   display: grid;
   place-items: center;
+  padding: 15px;
   &:before{
     content: "";
     position: absolute;
@@ -599,10 +600,250 @@
   .banner-title{
     font-family: $app-font-banner;
     font-size: 91px;
+    line-height: 85px;
     color: #fff;
     font-weight: 900;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  @media (max-width: 768px) {
+    height: 210px;
+    .banner-title{
+      font-size: 45px;
+      line-height: 45px;
+    }
   }
 }
 /*---------END : sub page banner section---------------*/
 
+/*BEGIN : section common pad*/
+.app-sec-common-pad {
+  padding-block: 60px;
+}
+@media (max-width: 768px) {
+  .app-sec-common-pad {
+    padding-block: 30px;
+  }
+}
+/*END : section common pad*/
+/*BEGIN : section title*/
+.app-section-title {
+  color: $app-secondary;
+  font-size: 30px;
+  line-height: 1.75rem;
+  position: relative;
+  margin-bottom: 54px;
+  padding-bottom: 17px;
+}
 
+.app-section-title:before {
+  content: "";
+  width: 37px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-inline: auto;
+  border-bottom: 4px solid $app-primary;
+}
+@media (max-width: 575px) {
+  .app-section-title {
+    font-size: 24px;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .app-section-title:before {
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+  }
+}
+/*END : section title*/
+/*BEGIN : section about text*/
+.section-about-text{
+  p{
+    font-size: 22px;
+    line-height: 38px;
+    color: #21353A;
+  }
+  @media (max-width: 768px){
+    p{
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
+/*END : section about text*/
+/*BEGIN : function card*/
+.function-card{
+  background-color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(54, 127, 169, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 33px;
+  padding: 46px 30px;
+  .function-title{
+    font-size: 20px;
+    line-height: 36px;
+    color: #646869;
+    margin-bottom: 30px;
+
+  }
+  .function-icon-wrapper{
+    height: 170px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 6px solid $app-secondary;
+    display: grid;
+    place-items: center;
+  }
+  .function-icon{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+  @media(max-width: 768px){
+    padding: 26px 20px;
+    .function-title{
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .function-icon-wrapper{
+      height: 120px;
+    }
+  }
+}
+/*END : function card*/
+
+/*BEGIN : app table*/
+.table-card{
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(54, 127, 169, 0.16);
+}
+table.app-table{
+  tr{
+    th,td{
+      font-size: toRem(14);
+      padding: 10px 12px;
+    }
+  }
+  thead{
+    th{
+      background-color: rgba(6,22,58,0.017);
+      color: #06163A;
+    }
+  }
+}
+.grid-action-icon{
+  height: 16px;
+  width: 16px;
+}
+/*END : app table*/
+
+/*BEGIN : focus area*/
+.section-focus-area {
+  .focus-area-title {
+    line-height: 30px;
+    color: #606060;
+    min-height: 60px;
+  }
+  @media (max-width: 991px) {
+    .focus-area-title-col {
+      width: 100%;
+      text-align: center;
+    }
+    .focus-area-title{
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 0px !important;
+    }
+    .focus-area-card{
+      padding-bottom: 0px !important;
+    }
+  }
+}
+.focus-area-card {
+  border: 1px solid #d3efff;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 30px 10px;
+  background-color: #eff9ff;
+  @extend %common-transition;
+  &:hover {
+    box-shadow: 6px 4px 17px 0px rgba(0, 0, 0, 0.102);
+  }
+}
+/*END : focus area*/
+
+/*---------BEGIN: contact us---------------*/
+.section-contact-us{
+  .contact-cards{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media(max-width: 991px){
+    .contact-cards{
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.contact-card{
+  height: 100%;
+  padding: 30px;
+  .card-ico{
+      position: absolute;
+      height: 80px;
+      aspect-ratio: 1;
+      background-color: #DBEDFF;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 50px;
+      color: $app-primary;
+      margin-inline: auto;
+      top: -40px;
+      left: 0;
+      right: 0;
+      display: grid;
+      place-items: center;
+      svg{
+        height: 40px;
+        width: 40px;
+      }
+  }
+  .card-main-title{
+    text-align: center;
+    font-size: toRem(20);
+    line-height: toRem(40);
+    color: $app-secondary;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .contact-row{
+    position: relative;
+    padding-left: 35px;
+    min-height: 20px;
+    margin-bottom: 12px;
+    
+    &:not(a){
+      color: #0A0A0A;
+    }
+    .contact-icon{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      font-size: 20px;
+      height: 20px;
+      width: 20px;
+    }
+
+    span{
+      font-size: toRem(14);
+      line-height: toRme(22.5);
+    }
+  }
+}
+/*---------END: contact us---------------*/

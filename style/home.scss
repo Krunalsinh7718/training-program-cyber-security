@@ -383,51 +383,7 @@
 }
 }
 /*END : website main banner */
-/*BEGIN : section common pad*/
-.app-sec-common-pad {
-  padding-block: 60px;
-}
-@media (max-width: 768px) {
-  .app-sec-common-pad {
-    padding-block: 30px;
-  }
-}
-/*END : section common pad*/
-/*BEGIN : section title*/
-.app-section-title {
-  color: $app-secondary;
-  font-size: 30px;
-  line-height: 1.75rem;
-  position: relative;
-  margin-bottom: 54px;
-  padding-bottom: 17px;
-}
 
-.app-section-title:before {
-  content: "";
-  width: 37px;
-  display: inline-block;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-inline: auto;
-  border-bottom: 4px solid $app-primary;
-}
-@media (max-width: 575px) {
-  .app-section-title {
-    font-size: 24px;
-    line-height: 1.15rem;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .app-section-title:before {
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-  }
-}
-/*END : section title*/
 /*BEGIN : focus area*/
 .section-focus-area {
   .focus-area-title {
@@ -462,7 +418,7 @@
   }
 }
 /*END : focus area*/
-/*BEGIN : focus area*/
+/*BEGIN : section news flash*/
 .section-news-flash {
   .item{
     padding: 0 15px;
@@ -493,7 +449,7 @@
     }
   }
 }
-/*END : focus area*/
+/*END : section news flash*/
 /*BEGIN : announcement news */
 
 .announcement-text-card {
