@@ -567,5 +567,42 @@
   }
 }
 /*---------END : focus area---------------*/
+/*---------BEGIN : sub page banner section---------------*/
+.sub-page-title-banner{
+  position: relative;
+  height: 299px;
+  @extend %bg-banner;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  &:before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.63);
+    z-index: -1;
+
+  }
+  .banner-breadcrumb{
+    position: absolute;
+    left: 21px;
+    top: 19px;
+    .breadcrumb-item{
+      &:before{
+        color: #fff;
+      }
+      &.active{
+        color: #fff;
+      }
+    }
+  }
+  .banner-title{
+    font-family: $app-font-banner;
+    font-size: 91px;
+    color: #fff;
+    font-weight: 900;
+  }
+}
+/*---------END : sub page banner section---------------*/
 
 
